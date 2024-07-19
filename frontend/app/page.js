@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from 'react';
-import FeaturedComponent from './components/FeatureComponents';// Ensure the path is correct
+import FeaturedComponent from './components/FeatureComponents'; // Ensure the path is correct
 
 export default function Home() {
   const [data, setData] = useState([]);
@@ -30,7 +30,7 @@ export default function Home() {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold text-center mb-8">Featured Data Points</h1>
+      <h1 className="text-3xl font-bold text-center mb-8">ASSIGNMENT SUBMISSION   </h1>
       {data.length === 0 ? (
         <p className="text-center">No data available</p>
       ) : (
