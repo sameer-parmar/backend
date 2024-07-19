@@ -1,10 +1,10 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
-
+const cors = require('cors'); 
 const app = express();
-const port = process.env.PORT || 3000;
-
+const port = process.env.PORT || 3001;
+app.use(cors());
 app.get('/api/globe-data', (req, res) => {
     const dataPath = path.join(__dirname, 'data.json');
     fs.readFile(dataPath, 'utf8', (err, data) => {
