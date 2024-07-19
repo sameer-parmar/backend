@@ -1,7 +1,6 @@
-// app/page.js
 "use client";
 import { useEffect, useState } from 'react';
-import FeaturedComponent from './components/FeatureComponents'; // Ensure the path is correct
+import FeaturedComponent from './components/FeatureComponents';// Ensure the path is correct
 
 export default function Home() {
   const [data, setData] = useState([]);
@@ -9,7 +8,7 @@ export default function Home() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:3001/api/globe-data') // Update with your backend URL
+    fetch('https://backend-5-2syu.onrender.com/api/globe-data') // Update with your backend URL
       .then((response) => {
         if (!response.ok) {
           throw new Error('Network response was not ok');

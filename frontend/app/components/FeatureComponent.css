@@ -1,0 +1,135 @@
+/* components/FeatureComponent.css */
+
+/* Set a very light background color */
+body {
+  background-color: #f0f8ff; /* Light blue */
+}
+
+.circle-outer {
+  width: 800px; /* Increased size */
+  height: 800px; /* Increased size */
+  border: 2px dotted rgba(170, 170, 170, 0.3); /* Very light and transparent border */
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: rotate 60s linear infinite; /* Slow down the rotation */
+  z-index: 1; /* Lower z-index to make it the innermost layer */
+  background: #e0f7fa; /* Light cyan background for circles */
+}
+
+.circle-middle {
+  width: 600px; /* Increased size */
+  height: 600px; /* Increased size */
+  border: 2px dotted rgba(170, 170, 170, 0.3); /* Very light and transparent border */
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: rotate 90s linear infinite reverse; /* Slow down and reverse the rotation */
+  z-index: 2; /* Middle layer */
+  background: #e0f7fa; /* Light cyan background for circles */
+}
+
+.circle-inner {
+  width: 400px; /* Increased size */
+  height: 400px; /* Increased size */
+  border: 2px dotted rgba(170, 170, 170, 0.3); /* Very light and transparent border */
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: rotate 120s linear infinite; /* Slow down the rotation */
+  z-index: 3; /* Outer layer */
+  background: #e0f7fa; /* Light cyan background for circles */
+}
+
+.circle-center {
+  width: 200px; /* Increased size */
+  height: 200px; /* Increased size */
+  border: 2px dotted rgba(170, 170, 170, 0.3); /* Very light and transparent border */
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 4; /* Center layer */
+  background: #e0f7fa; /* Light cyan background for circles */
+}
+
+/* Rotate container */
+.rotate-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Positioning for sub-circles (ellipses) */
+.sub-circle {
+  width: 120px; /* Increased size */
+  height: 80px; /* Ellipse shape */
+  border: 2px dotted rgba(170, 170, 170, 0.3); /* Very light and transparent border */
+  border-radius: 50%; /* Ellipse shape */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background: #e0f7fa; /* Light cyan background */
+}
+
+/* Positioning and rotation of each layer */
+.sub-circle-outer {
+  transform: translate(-50%, -400px); /* Adjust to align with the outermost circle */
+  z-index: 3; /* Outer sub-circles */
+}
+
+.sub-circle-middle {
+  transform: translateX(300px); /* Move horizontally */
+  z-index: 2; /* Middle sub-circles */
+}
+
+.sub-circle-inner {
+  transform: translateX(200px); /* Move horizontally */
+  z-index: 1; /* Innermost sub-circles */
+}
+
+.sub-circle-center {
+  transform: none; /* No transformation for center sub-circles */
+  z-index: 4; /* Center sub-circles */
+}
+
+/* Ensure text inside sub-circles remains upright and static */
+.sub-circle-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: none; /* Prevent rotation */
+}
+
+.sub-circle span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: none; /* Remove rotation */
+  position: relative;
+}
+
+.circle-text {
+  font-size: 12px; /* Adjust font size */
+  padding: 5px; /* Adjust padding */
+}
+
+/* Add keyframes for rotation */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
