@@ -17,25 +17,6 @@ Vercel: Frontend hosting.
 Render: Backend hosting.
 
 
-
-Project Structure
-
-
-
-  
-├── backend/                   # Node.js backend project
-│   ├── server.js              # Main server file
-│   ├── user.js                # User API routes
-│   └── package.json           # Node.js dependencies and scripts
-├── frontend/                  # Next.js frontend project
-│   ├── pages/                 # Next.js pages
-│   ├── public/                # Static assets
-│   ├── styles/                # CSS files
-│   └── package.json           # Next.js dependencies and scripts
-└── data_extraction/           # Python scripts for data extraction
-    ├── extract_data.py        # Script to extract data from Excel
-    ├── requirements.txt       # Python dependencies
-    └── README.md              # Documentation for data extraction
 Setup and Installation
 Backend Setup
 Clone the Repository:
