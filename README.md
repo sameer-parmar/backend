@@ -15,9 +15,14 @@ Node.js: Backend development and REST API creation.
 Next.js: Frontend development with React.
 Vercel: Frontend hosting.
 Render: Backend hosting.
+
+
+
 Project Structure
-php
-Copy code
+
+
+
+  
 ├── backend/                   # Node.js backend project
 │   ├── server.js              # Main server file
 │   ├── user.js                # User API routes
@@ -35,58 +40,67 @@ Setup and Installation
 Backend Setup
 Clone the Repository:
 
-bash
-Copy code
+
 git clone <repository-url>
+
+
 cd backend
+
 Install Dependencies:
 
-bash
-Copy code
 npm install
 Run the Server Locally:
 
-bash
-Copy code
+
 npm start
 Frontend Setup
 Navigate to the Frontend Directory:
 
-bash
-Copy code
 cd frontend
+
+
 Install Dependencies:
 
-bash
-Copy code
+
 npm install
+
+
 Run the Development Server:
 
-bash
-Copy code
+
 npm run dev
+
+
 Data Extraction Setup
+
+
 Navigate to the Data Extraction Directory:
 
-bash
-Copy code
+
 cd data_extraction
+
 Install Python Dependencies:
 
-bash
-Copy code
+
 pip install -r requirements.txt
+
 Run the Data Extraction Script:
 
-bash
-Copy code
+
 python extract_data.py
+
 Deployment
 Backend
-The backend is deployed on Render. The API endpoint can be accessed at: https://backend-5-2syu.onrender.com/api/globe-data
+The backend is deployed on Render. The API endpoint can be accessed at
+
+
+: https://backend-5-2syu.onrender.com/api/globe-data
 
 Frontend
-The frontend is hosted on Vercel. You can view the live application at: https://your-vercel-project-url.vercel.app
+The frontend is hosted on Vercel. You can view the live application at:
+
+
+https://your-vercel-project-url.vercel.app
 
 Usage
 Data Extraction: Run the extract_data.py script to process Excel files and prepare data for the backend.
