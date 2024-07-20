@@ -1,14 +1,14 @@
 "use client";
 import { useEffect, useState } from 'react';
-import FeaturedComponent from './components/FeatureComponents'; // Ensure the path is correct
-import './globals.css'; // Import the CSS file for loading animation
+import FeaturedComponent from './components/FeatureComponents'; 
+import './globals.css'; 
 export default function Home() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('https://backend-5-2syu.onrender.com/api/globe-data') // Update with your backend URL
+    fetch('https://backend-5-2syu.onrender.com/api/globe-data') 
       .then((response) => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
