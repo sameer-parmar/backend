@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from 'react';
 import FeaturedComponent from './components/FeatureComponents'; // Ensure the path is correct
-
+import './globals.css'; // Import the CSS file for loading animation
 export default function Home() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -25,12 +25,20 @@ export default function Home() {
       });
   }, []);
 
-  if (loading) return <p className="text-center">Loading...</p>;
+  if (loading) return (
+    <div className="loading-container">
+      <div className="loading-spinner"></div> {/* Loading Spinner */}
+      <p className="loading-message">
+        The API is hosted on Render, so fetching data might take a moment. Please be patient.
+      </p>
+    </div>
+  );
+
   if (error) return <p className="text-center text-red-500">Error: {error}</p>;
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold text-center mb-8">ASSIGNMENT SUBMISSION   </h1>
+      <h1 className="text-3xl font-bold text-center mb-8">ASSIGNMENT SUBMISSION</h1>
       {data.length === 0 ? (
         <p className="text-center">No data available</p>
       ) : (
