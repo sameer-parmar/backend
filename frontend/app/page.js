@@ -29,7 +29,7 @@ export default function Home() {
     <div className="loading-container">
       <div className="loading-spinner"></div> {/* Loading Spinner */}
       <p className="loading-message">
-        The API is hosted on Render, so fetching data might take a moment. Please be patient.
+        The Backend is hosted on Render, so fetching data might take a moment. Please be patient........
       </p>
     </div>
   );

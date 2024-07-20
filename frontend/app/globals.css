@@ -1,11 +1,12 @@
-
-/* Centering the loading container */
 .loading-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh; /* Full viewport height */
+    background: linear-gradient(135deg, #a2c2e8, #f2f2f2); /* Cool gradient background */
+    color: #333; /* Dark grey for text */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Stylish font */
   }
   
   /* Loader spinner */
@@ -16,7 +17,7 @@
     width: 60px;
     height: 60px;
     animation: spin 1s linear infinite;
-    margin-bottom: 16px; /* Space between spinner and message */
+    margin-bottom: 20px; /* Space between spinner and message */
   }
   
   /* Spin animation */
@@ -27,7 +28,9 @@
   
   /* Loading message */
   .loading-message {
-    font-size: 16px;
-    color: #333; /* Dark grey for better readability */
+    font-size: 18px; /* Slightly larger text */
+    font-weight: 500; /* Medium weight for better visibility */
     text-align: center;
+    line-height: 1.4; /* Better line spacing */
+    max-width: 80%; /* Prevents text from stretching too wide */
   }
