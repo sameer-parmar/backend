@@ -81,7 +81,7 @@ Frontend
 The frontend is hosted on Vercel. You can view the live application at:
 
 
-https://your-vercel-project-url.vercel.app
+https://frontend-brown-psi.vercel.app/
 
 Usage
 Data Extraction: Run the extract_data.py script to process Excel files and prepare data for the backend.
