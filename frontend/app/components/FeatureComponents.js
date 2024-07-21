@@ -24,7 +24,7 @@ const FeaturedComponent = ({ data }) => {
 </div>
 
       <div className="circle inner-circle">
-        <div className="circle-item" style={{ transform: 'rotate(0deg) translate(150px,-30px) rotate(0deg)' }}>
+        <div className="circle-item" style={{ transform: 'rotate(0deg) translate(150px,-50px) rotate(0deg)' }}>
           <h3>Photographs</h3>
           <p>{photographs}</p>
         </div>
@@ -36,18 +36,18 @@ const FeaturedComponent = ({ data }) => {
           <h3>Bank Statements</h3>
           <p>{bankStatements}</p>
         </div>
-        <div className="circle-item" style={{ transform: 'rotate(270deg) translate(250px,-30PX) rotate(-270deg)' }}>
+        <div className="circle-item" style={{ transform: 'rotate(270deg) translate(250px,-70PX) rotate(-270deg)' }}>
           <h3>Academic Records</h3>
           <p>{academicRecords}</p>
         </div>
       </div>
 
       <div className="circle outer-circle">
-        <div className="circle-item" style={{ transform: 'rotate(45deg) translate(310px,50px) rotate(-45deg)' }}>
+        <div className="circle-item" style={{ transform: 'rotate(45deg) translate(340px,20px) rotate(-45deg)' }}>
           <h3>Identity Proof</h3>
           <p>{identityProof}</p>
         </div>
-        <div className="circle-item" style={{ transform: 'rotate(135deg) translate(380px) rotate(-135deg)' }}>
+        <div className="circle-item" style={{ transform: 'rotate(135deg) translate(380px,20px) rotate(-135deg)' }}>
           <h3>Additional Documents</h3>
           <p>{additionalDocuments}</p>
         </div>
@@ -55,7 +55,7 @@ const FeaturedComponent = ({ data }) => {
           <h3>Guarantor Form</h3>
           <p>{guarantorForm}</p>
         </div>
-        <div className="circle-item" style={{ transform: 'rotate(315deg) translate(390px,-20px) rotate(-315deg)' }}>
+        <div className="circle-item" style={{ transform: 'rotate(315deg) translate(390px,-30px) rotate(-315deg)' }}>
           <h3>Application Form</h3>
           <p>{applicationForm}</p>
         </div>
