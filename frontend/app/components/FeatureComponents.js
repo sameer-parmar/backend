@@ -28,7 +28,7 @@ const FeaturedComponent = ({ data }) => {
           <h3>Photographs</h3>
           <p>{photographs}</p>
         </div>
-        <div className="circle-item " style={{ transform: 'rotate(90deg) translate(120px,80px) rotate(-90deg)' }}>
+        <div className="circle-item " style={{ transform: 'rotate(90deg) translate(150px,80px) rotate(-90deg)' }}>
           <h3>Property Documents</h3>
           <p>{propertyDocuments}</p>
         </div>
