@@ -1,155 +1,71 @@
-/* Set a light, subtle background color */
-body {
-  background: linear-gradient(135deg, #e0f7fa, #b2ebf2); /* Smooth gradient from light cyan to light blue */
-  font-family: 'Roboto', sans-serif; /* Modern, clean font */
-  color: #333; /* Dark grey text for better readability */
-  margin: 0; /* Remove default margin */
-  overflow: hidden; /* Prevent scrollbars */
-}
-
-/* Outer circle style */
-.circle-outer {
+.circle-container {
+  position: relative;
   width: 800px;
   height: 800px;
-  border: 2px dashed rgba(170, 170, 170, 0.4); /* Dashed border for a cooler effect */
-  border-radius: 50%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: rotate 60s linear infinite; /* Slow rotation */
-  z-index: 1;
-  background: rgba(255, 255, 255, 0.8); /* Slightly opaque white background */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  margin: auto;
+  transform: translate(50px, 50px); /* Shift the entire container */
 }
 
-/* Middle circle style */
-.circle-middle {
-  width: 600px;
-  height: 600px;
-  border: 2px dashed rgba(170, 170, 170, 0.4);
-  border-radius: 50%;
+.circle {
   position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: rotate 90s linear infinite reverse; /* Slower and reversed rotation */
-  z-index: 2;
-  background: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-/* Inner circle style */
-.circle-inner {
-  width: 400px;
-  height: 400px;
-  border: 2px dashed rgba(170, 170, 170, 0.4);
   border-radius: 50%;
+  background-color: transparent;
+  border: 1px dashed #a5a5a5; /* Add dotted border */
+}
+
+.center-circle {
+  width: 120px; /* Increased size */
+  height: 120px; /* Increased size */
+}
+
+.inner-circle {
+  width: 400px; /* Increased size */
+  height: 400px; /* Increased size */
+}
+
+.outer-circle {
+  width: 800px; /* Increased size */
+  height: 800px; /* Increased size */
+}
+
+.outermost-circle {
+  width: 1100px; /* Increased size */
+  height: 1100px; /* Increased size */
+}
+
+.circle-item {
   position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: rotate 120s linear infinite; /* Slower rotation */
-  z-index: 3;
-  background: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Center circle style */
-.circle-center {
-  width: 200px;
-  height: 200px;
-  border: 2px dashed rgba(170, 170, 170, 0.4);
-  border-radius: 50%;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 4;
-  background: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Rotate container */
-.rotate-container {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Sub-circle styling */
-.sub-circle {
-  width: 140px; /* Slightly larger size */
-  height: 100px; /* Adjusted ellipse size */
-  border: 2px dashed rgba(170, 170, 170, 0.4);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  background: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Positioning for sub-circles */
-.sub-circle-outer {
-  transform: translate(-50%, -400px); /* Adjust to align with the outermost circle */
-  z-index: 3;
-}
-
-.sub-circle-middle {
-  transform: translateX(350px); /* Move horizontally */
-  z-index: 2;
-}
-
-.sub-circle-inner {
-  transform: translateX(250px); /* Move horizontally */
-  z-index: 1;
-}
-
-.sub-circle-center {
-  transform: none; /* No transformation for center sub-circles */
-  z-index: 4;
-}
-
-/* Content within sub-circles */
-.sub-circle-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: none; /* Prevent rotation */
+  width: 160px; /* Increased width */
   text-align: center;
-  color: #333; /* Dark grey text */
-  font-size: 14px; /* Adjusted font size */
+  color: rgb(31, 176, 224);
+  top: 50%;
+  left: 40%;
+  transform-origin: 0 0;
+  background-color: #fff; /* Background to hide the dotted line */
+  border-radius: 100px; /* Rounded corners */
+  z-index: 1; /* Ensure the text is above the dotted lines */
+  padding: 20px; /* Increased padding for better readability */
+  box-shadow: 0 0 0px rgba(0, 0, 0, 0.5); /* Dark circles overlapping values */
 }
 
-/* Text styling inside sub-circles */
-.sub-circle span {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  transform: none; /* Remove rotation */
-  position: relative;
+/* Ensure text remains upright */
+.circle-item h3 {
+  color: darkblue;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
 }
 
-/* Styling for circle text */
-.circle-text {
-  font-size: 14px; /* Adjusted font size */
-  padding: 10px; /* Adjusted padding */
-  color: #555; /* Slightly lighter grey text */
-  font-weight: 500; /* Medium weight for better visibility */
+/* Ensure the text is upright by counter-rotating the text */
+.circle-item p {
+  margin: 0;
+  padding: 0;
+  transform: rotate(0deg); /* Adjust as needed to keep text upright */
 }
-
-/* Remove border from the innermost sub-circle */
-/* Removed border from .sub-circle-center */
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.draggable {
+  cursor: move; /* Change the cursor to a move icon */
 }

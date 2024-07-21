@@ -1,81 +1,70 @@
 "use client";
 
-import React from 'react';
 import './FeatureComponent.css'; // Ensure this path is correct
 
 const FeaturedComponent = ({ data }) => {
-  if (!data || data.length === 0) {
-    return <p className="text-center">No data available</p>;
-  }
-
-  const item = data[0]; // Get the first item from the array
-
-  const centerText = item[ "Income Proof"] ;
-  const middleTexts = [
-    { key: "Academic Records", value: item["Academic Records"] },
-    { key: "Property Documents", value: item["Property Documents"] },
-    { key: "Residence Proof", value: item["Residence Proof"] },
-    { key: "Bank Statements", value: item["Bank Statements"] },
-  ];
-  const innerTexts = [
-    { key: "Application Form", value: item["Application Form"] },
-    { key: "Photographs", value: item["Photographs"] },
-    { key: "Identity Proof", value: item["Identity Proof"] },
-    { key: "Guarantor Form", value: item["Guarantor Form"] },
-  ];
-  const outerText = { key:"Additional Documents" ,value:item["Additional Documents"]};
+  const incomeProof = data[0]['Income Proof'];
+  const photographs = data[0]['Photographs'];
+  const propertyDocuments = data[0]['Property Documents'];
+  const bankStatements = data[0]['Bank Statements'];
+  const academicRecords = data[0]['Academic Records'];
+  const identityProof = data[0]['Identity Proof'];
+  const additionalDocuments = data[0]['Additional Documents'];
+  const guarantorForm = data[0]['Guarantor Form'];
+  const applicationForm = data[0]['Application Form'];
+  const residenceProof = data[0]['Residence Proof'];
 
   return (
-    <div className="relative flex justify-center items-center h-screen">
-      {/* Outer Circle */}
-      <div className="circle-outer rotate-container">
-        <div className="sub-circle sub-circle-outer">
-          <div className="sub-circle-wrapper">
-            <span className="circle-text">{outerText.key}: {outerText.value}</span>
-          </div>
+    <div className="circle-container">
+     <div className="circle center-circle">
+  <div className="circle-item center-item" style={{ transform: 'translate(-100px, -100px) rotate(0deg)' }}>
+    <h3>Income Proof</h3>
+    <p>{incomeProof}</p>
+  </div>
+</div>
+
+      <div className="circle inner-circle">
+        <div className="circle-item" style={{ transform: 'rotate(0deg) translate(150px,-30px) rotate(0deg)' }}>
+          <h3>Photographs</h3>
+          <p>{photographs}</p>
         </div>
+        <div className="circle-item " style={{ transform: 'rotate(90deg) translate(120px,80px) rotate(-90deg)' }}>
+          <h3>Property Documents</h3>
+          <p>{propertyDocuments}</p>
+        </div>
+        <div className="circle-item" style={{ transform: 'rotate(180deg) translate(280px,40PX) rotate(-180deg)' }}>
+          <h3>Bank Statements</h3>
+          <p>{bankStatements}</p>
+        </div>
+        <div className="circle-item" style={{ transform: 'rotate(270deg) translate(250px,-30PX) rotate(-270deg)' }}>
+          <h3>Academic Records</h3>
+          <p>{academicRecords}</p>
+        </div>
+      </div>
 
-        {/* Middle Circle */}
-        <div className="circle-middle rotate-container">
-          {innerTexts.map((text, index) => (
-            <div
-              key={index}
-              className="sub-circle sub-circle-middle"
-              style={{
-                transform: `rotate(${index * 90}deg) translateX(300px) rotate(-${index * 90}deg)`,
-              }}
-            >
-              <div className="sub-circle-wrapper">
-                <span className="circle-text">{text.key}: {text.value}</span>
-              </div>
-            </div>
-          ))}
+      <div className="circle outer-circle">
+        <div className="circle-item" style={{ transform: 'rotate(45deg) translate(310px,50px) rotate(-45deg)' }}>
+          <h3>Identity Proof</h3>
+          <p>{identityProof}</p>
+        </div>
+        <div className="circle-item" style={{ transform: 'rotate(135deg) translate(380px) rotate(-135deg)' }}>
+          <h3>Additional Documents</h3>
+          <p>{additionalDocuments}</p>
+        </div>
+        <div className="circle-item" style={{ transform: 'rotate(225deg) translate(450px) rotate(-225deg)' }}>
+          <h3>Guarantor Form</h3>
+          <p>{guarantorForm}</p>
+        </div>
+        <div className="circle-item" style={{ transform: 'rotate(315deg) translate(390px,-20px) rotate(-315deg)' }}>
+          <h3>Application Form</h3>
+          <p>{applicationForm}</p>
+        </div>
+      </div>
 
-          {/* Inner Circle */}
-          <div className="circle-inner rotate-container">
-            {middleTexts.map((text, index) => (
-              <div
-                key={index}
-                className="sub-circle sub-circle-inner"
-                style={{
-                  transform: `rotate(${index * 90}deg) translateX(200px) rotate(-${index * 90}deg)`,
-                }}
-              >
-                <div className="sub-circle-wrapper">
-                  <span className="circle-text">{text.key}: {text.value}</span>
-                </div>
-              </div>
-            ))}
-
-            {/* Center Circle */}
-            <div className="circle-center">
-              <div className="sub-circle sub-circle-center">
-                <div className="sub-circle-wrapper">
-                  <span className="circle-text">{centerText}</span>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div className="circle outermost-circle">
+        <div className="circle-item" style={{ transform: 'rotate(30deg) translate(500px,-100px) rotate(-30deg)' }}>
+          <h3>Residence Proof</h3>
+          <p>{residenceProof}</p>
         </div>
       </div>
     </div>
