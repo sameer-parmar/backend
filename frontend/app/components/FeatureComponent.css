@@ -14,7 +14,8 @@
 
   border-radius: 50%;
   background-color: transparent;
-  border: 1px dashed #a5a5a5; /* Add dotted border */
+  border: 1px dashed #a5a5a5;
+  animation: rotate 70s  linear infinite; /* Add dotted border */
 }
 
 .center-circle {
@@ -49,7 +50,9 @@
   border-radius: 100px; /* Rounded corners */
   z-index: 1; /* Ensure the text is above the dotted lines */
   padding: 20px; /* Increased padding for better readability */
-  box-shadow: 0 0 0px rgba(0, 0, 0, 0.5); /* Dark circles overlapping values */
+  box-shadow: 0 0 0px rgba(0, 0, 0, 0.5); 
+  animation: upward-revolve 10s linear infinite;
+  /* Dark circles overlapping values */
 }
 
 /* Ensure text remains upright */
@@ -60,12 +63,29 @@
   padding: 0;
 }
 
+
 /* Ensure the text is upright by counter-rotating the text */
 .circle-item p {
   margin: 0;
   padding: 0;
   transform: rotate(0deg); /* Adjust as needed to keep text upright */
 }
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
 .draggable {
   cursor: move; /* Change the cursor to a move icon */
+}
+@keyframes revolve {
+  0% {
+    transform: rotate(0deg) translateX(200px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(200px) rotate(-360deg);
+  }
 }
